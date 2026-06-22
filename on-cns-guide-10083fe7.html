@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于世界杯 · 可信站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fafbfc;
+            color: #1e2a3d;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.2rem 4rem;
+        }
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        /* 导航 */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2.5rem;
+        }
+        .logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #0b1c2f;
+        }
+        .logo em {
+            font-style: normal;
+            color: #306998;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #385a7a;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #1b3b5c;
+        }
+
+        /* 主标题 */
+        .hero {
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: #3c4f64;
+            max-width: 580px;
+        }
+
+        /* 介绍段落 */
+        .intro-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.02);
+            margin-bottom: 2.8rem;
+        }
+        .intro-card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0b1c2f;
+        }
+        .intro-card p {
+            margin-bottom: 1rem;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三个场景模块 */
+        .scenes {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .scene-item {
+            background: white;
+            border-radius: 14px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 3px 10px rgba(0,0,0,0.02);
+            border-left: 4px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .scene-item:nth-child(1) {
+            border-left-color: #7c9ec0;
+        }
+        .scene-item:nth-child(2) {
+            border-left-color: #9bb7d4;
+        }
+        .scene-item:nth-child(3) {
+            border-left-color: #b3cde0;
+        }
+        .scene-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a3148;
+        }
+        .scene-item p {
+            font-size: 0.95rem;
+            color: #3e546b;
+        }
+
+        /* 常见说明 (FAQ 摘要) */
+        .faq-section {
+            background: #f2f5f9;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .faq-section h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #0b1c2f;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1f3b57;
+            margin-bottom: 0.25rem;
+        }
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #3c556d;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 页脚 */
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7f95;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dee5ed;
+        }
+        .footer-note a {
+            color: #306998;
+            text-decoration: none;
+        }
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 1rem 3rem;
+            }
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding-bottom: 1.2rem;
+                margin-bottom: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .intro-card, .faq-section {
+                padding: 1.4rem 1.2rem;
+            }
+            .scene-item {
+                padding: 1.2rem 1.2rem;
+            }
+            .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="logo">⛅ <em>on-cns-sjb</em></span>
+        <div class="nav-links">
+            <a href="#">首页</a>
+            <a href="#">关于</a>
+            <a href="#">资源</a>
+            <a href="#">帮助</a>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <div class="hero">
+        <h1>关于世界杯的信息站点</h1>
+        <p>一份温和、清晰的参考，帮助你了解赛事背景与动态。本站内容保持克制与真实，不做夸大引导。</p>
+    </div>
+
+    <!-- 核心介绍：站点与可信说明 -->
+    <div class="intro-card">
+        <h2>站点介绍 · 可信说明</h2>
+        <p>本页面是 <a href="https://on-cns-sjb.com">世界杯</a> 相关信息的轻量入口，并非官方组织或商业平台。我们致力于整理公开、可查的赛事资料，包括历届回顾、球队数据与赛程常识，方便爱好者快速查阅。</p>
+        <p>所有内容均来自可验证的公开来源，不包含任何未经证实的预测、博彩引导或诱导性表述。如果你希望获得更完整的赛事数据与实时新闻，可以直接访问 <a href="https://on-cns-sjb.com">世界杯</a> 站点，那里有更系统的专题内容。</p>
+        <p>我们相信，好的信息应当是安静、清晰且可信的。不需要浮夸的标语，也不需要紧迫的催促，只需一个值得停留片刻的页面。</p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes">
+        <div class="scene-item">
+            <h3>📋 赛程与分组</h3>
+            <p>快速了解当前周期的小组分布、淘汰赛时间线以及关键场次安排。适合赛前规划观赛日程，也适合回看已结束的比赛记录。</p>
+        </div>
+        <div class="scene-item">
+            <h3>🏆 历届冠军与经典瞬间</h3>
+            <p>从早期赛事到最近一届，整理冠军队伍、决赛比分以及被反复提及的经典对决。每一段历史都值得被安静地翻阅，而不是被喧嚣淹没。</p>
+        </div>
+        <div class="scene-item">
+            <h3>🌍 球队与地区视角</h3>
+            <p>不同大洲的参赛队伍、晋级之路、风格特点。没有绝对的强弱判断，只有客观的数据与背景介绍，帮助读者形成自己的观察。</p>
+        </div>
+    </div>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <div class="faq-section">
+        <h2>常见说明</h2>
+        <div class="faq-item">
+            <strong>关于内容来源</strong>
+            <p>本站数据主要参考国际足联官方档案、权威体育媒体及公开赛事统计。每次更新都会标注参考时间，确保信息可溯源。</p>
+        </div>
+        <div class="faq-item">
+            <strong>是否提供实时比分或直播？</strong>
+            <p>不提供。本页面为介绍与导航用途，不包含实时比分、直播链接或任何形式的实时数据推送。如有实时需求，可前往官方渠道。</p>
+        </div>
+        <div class="faq-item">
+            <strong>如何获取更完整的资料？</strong>
+            <p>你可以通过 <a href="https://on-cns-sjb.com">世界杯</a> 主站浏览更详细的专题，例如历史数据对比、球队阵容档案等。所有内容均免费开放，无需注册。</p>
+        </div>
+        <div class="faq-item">
+            <strong>是否与任何博彩或商业机构有关？</strong>
+            <p>完全无关。本站不接受任何博彩、借贷、金融类广告或合作，内容纯粹围绕赛事信息与体育文化展开。</p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        <p>© 2025  ·  信息参考 ·  <a href="https://on-cns-sjb.com">世界杯</a>  ·  保持克制与真实</p>
+    </div>
+
+</div>
+</body>
+</html>
